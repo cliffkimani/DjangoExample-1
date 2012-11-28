@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %} Index Page {% endblock title%}
+
+{% block content %}
+
+<table>
+	<tr>
+		<th> First Name </th>
+		<th> Last Name </th>
+		<th> Age </th>
+		<th> Sex </th> 
+	</tr>
+	{% for user in users %}
+	<tr> 
+		<td> {{ user.first_name }} </td>
+		<td> {{ user.last_name }} </td>
+		<td> {{ user.age }} </td>
+		<td> {{ user.sex }} </td>
+
+	</tr>
+	{% endfor %}
+</table>
+
+
+{% endblock content %}
